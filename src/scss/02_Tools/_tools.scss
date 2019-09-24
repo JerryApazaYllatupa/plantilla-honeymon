@@ -4,6 +4,12 @@
   margin-bottom: .2em;
   color: $black;
 }
+.title3{
+  font-family: $fontlato;
+  color: $black;
+  font-weight: lighter;
+  font-size: 1.3em;
+}
 // Diseño del titulo principal
 .design-title{
   text-align: center;
@@ -31,6 +37,9 @@
 .text{
   color: $colortext;
   font-family: $fontlato;
-  font-size: 1em;
-  font-weight:italic;
+  font-size: 1.1em;
+  font-style: italic;
+  line-height: 1.3em;
+  white-space:pre-line;
+  letter-spacing: .06em;
 }

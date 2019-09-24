@@ -1,18 +1,37 @@
-mixin title(text="Titulo",description="Our descripction")
-  .design-title
-    h1.title1=text
-    span.design-title__span
-    p.design-title__description=description
+mixin title(text="Titulo",description,type=1)
 
+  if type == 1
+    .design-title
+      h1.title1=text
+      span.design-title__span
+      p.design-title__description=description
+  else if type == 2
+    .design-title
+      h2.title2=text
+      span.design-title__span
+  else
+    .design-title
+      h3.title3=text
+      span.design-title__span
 
-mixin itinerary(title="Machu Picchu Full day Tour",img,description)
+mixin itinerary(title="Machu Picchu Full day Tour",img,description,url)
   .itinerary
     .itinerary__frond
       img.itinerary__img(src=img, alt=img) 
       .itinerary__capa
       h2.itinerary__title.textwhite=title
     .itinerary__back
-      h2.itinerary__title=title
-      i.fa.fa-quote-left
+      h3.itinerary__title--back=title
+      i.itinerary__icon.fa.fa-quote-left
       p.itinerary__description.text=description
-      +button()
+      +button(url=url)
+
+mixin targetblog(title="Montaña de 7 colores",description,img,url)
+  .target-blog
+    .target-blog__content
+      +title('Montaña de 7 colores','',type=3)
+      p.target-blog__description.text=description
+      +button
+    a.target-blog__img(href=url)
+      img(src=img, alt=img)
+    

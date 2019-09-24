@@ -61,4 +61,7 @@
   }
 }
 
-// Titulo
+// Function for tura img
+@function ruta_img($img){
+  @return './../img/#{$img}';
+}

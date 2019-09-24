@@ -1,0 +1,92 @@
+.whyus {
+  position: relative;
+  height: 760px;
+  display: grid;
+
+  &__img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  @include from(l) {
+    width: 100%;
+    background-image: url(ruta_img("people-montain.jpg"));
+    background-repeat: no-repeat;
+    background-size: 120%;
+    animation: bg 20s infinite linear alternate;
+    // animation:s
+
+    &__img {
+      display: none;
+    }
+    @keyframes bg {
+      from {
+        background-position: top left;
+      }
+
+      to {
+        background-position: center right;
+      }
+    }
+  }
+  &__content {
+    color: $lightwhite;
+    max-width: $max-width;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    right: 0;
+    display: grid;
+    margin: auto;
+    grid-template-columns: repeat(2, 1fr);
+
+    .design-title {
+      grid-column: span 2;
+      margin-bottom: 15px;
+      .title1,
+      &__span,
+      &__description {
+        color: $lightwhite;
+      }
+    }
+    @include from(l) {
+      grid-gap: 30px;
+    }
+  }
+
+  &__capa {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+
+  &__experience,
+  &__expertice,
+  &__price,
+  &__service {
+    text-align: center;
+    @include from() {
+      text-align: start;
+      img {
+        float: left;
+        margin-right: 10px;
+        padding: 7% 0;
+      }
+    }
+    .text {
+      color: $lightwhite;
+    }
+  }
+
+  // &__text {
+  //   // color:
+  // }
+  @include from(m) {
+    height: 600px;
+  }
+}

@@ -1,0 +1,66 @@
+.blogoferta {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: $lightwhite;
+
+  // &__blog{  }
+  // &__oferta {
+  // }
+  // &__offertitle {
+  // }
+
+  &__offercontent {
+    border-radius: 8px;
+    box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em;
+    background-color: white;
+    
+    & * {
+      margin: .7em auto;
+    }
+  }
+
+  @include from(l) {
+    grid-template-columns: 70% 1fr;
+    grid-gap: 2%;
+  }
+}
+
+.target-blog {
+  background-color: white;
+  padding: 1em;
+  border-radius: 8px;
+  box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+
+  &__content {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  // &__description {
+  // }
+  &__img {
+    flex: 1;
+    height: 100%;
+    margin: auto;
+    order: -1;
+  }
+  @include from {
+    flex-direction: row;
+    &__img {
+      order: 1;
+    }
+  }
+
+  &:hover {
+    border: 1px solid gray;
+  }
+}

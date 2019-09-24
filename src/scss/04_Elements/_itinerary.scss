@@ -15,9 +15,11 @@
   display: grid;
   overflow: hidden;
   &__frond {
+    z-index: 2;
     display: flex;
     justify-content: center;
     align-items: center;
+    
   }
   &__img {
     height: 100%;
@@ -39,17 +41,31 @@
   }
 
   &__back {
-    display: block;
+    
+    height: 100%;
     background-color: $lightgray;
     position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 2;
+    z-index: 1;
     padding: 0.4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    // display: none;
   }
-  &__descripction {
-    display: flex
+
+  &__description {
+      text-align: center;
   }
+  &:hover &__frond{
+    transition: transform .2s ease;
+    transform: rotateY(90deg);
+  }
+}
+
+.itinerary__title--back{
+  text-align: center;
+  color: $black;
+  font-family: $fontlato;
 }
