@@ -1,0 +1,20 @@
+.btn-primary {
+  color: white;
+  border-radius: 18px;
+  background-color: $lightblue;
+    padding: .5em 1.3em;
+  i {
+    margin-right: 15px;
+  }
+  
+  &:hover {
+    background-color: opacity($lightblue);
+    border: 1px solid $lightblue;
+    color: $lightblue;
+    text-decoration: none;
+  }
+  @include from{
+    padding: .7em 1.6em;
+    
+  }
+}

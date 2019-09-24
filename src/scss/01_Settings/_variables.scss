@@ -1,0 +1,47 @@
+@font-face {
+    font-family: myLetter;
+    font-display: auto;
+    src: url(font/The-Sunset.woff2) format('woff2');
+}
+
+:root {
+  --lightblue: #2488ff;
+  --black:#111111;
+  --colorTitle: #434040;
+  --colortext: #5d5d5d;
+  --lightwhite: #e1dcdc;
+  --lightgray:#C5C5C5;
+  //variables secundarys
+  --heightheader:68px;
+  --fontfamily:myLetter;
+  --fonttitle:'Bad Script', cursive;
+  --fontlato: 'Lato', sans-serif;
+}
+
+// Globlas
+$container: container;
+
+// Fonts
+$font: var(--fontfamily);
+$fonttitle: var(--fonttitle);
+$fontlato: var(--fontlato);
+
+//Colors scss
+$lightblue: var(--lightblue);
+$black: var(--black);
+$colortext: var(--colortext);
+$lightwhite: var(--lightwhite);
+$lightgray:var(--lightgray);
+//Numbers
+$padding:15px;
+$max-width: 1200px;
+$heightheader:var(--heightheader);
+
+//Maps Breakpoints los tamaños 
+$breakpoints: (
+  s: 0,
+  m: 640px,
+  l: 1024px,
+  lg: 1200px,
+  xl: 1440px
+) !default;

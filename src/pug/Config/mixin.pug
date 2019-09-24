@@ -1,0 +1,18 @@
+mixin title(text="Titulo",description="Our descripction")
+  .design-title
+    h1.title1=text
+    span.design-title__span
+    p.design-title__description=description
+
+
+mixin itinerary(title="Machu Picchu Full day Tour",img,description)
+  .itinerary
+    .itinerary__frond
+      img.itinerary__img(src=img, alt=img) 
+      .itinerary__capa
+      h2.itinerary__title.textwhite=title
+    .itinerary__back
+      h2.itinerary__title=title
+      i.fa.fa-quote-left
+      p.itinerary__description.text=description
+      +button()

@@ -1,0 +1,36 @@
+.title1{
+  font-family: $fonttitle;
+  font-size: 2em;
+  margin-bottom: .2em;
+  color: $black;
+}
+// Diseño del titulo principal
+.design-title{
+  text-align: center;
+  &__span{
+    width: 5em;
+    background-color:$lightblue;
+    height: 3px;
+    display: block;
+    margin: auto;
+  }
+  
+  &__description{
+    margin-top: 5px;
+    color:$colortext;
+  }
+
+}
+
+.textwhite{
+  color:$lightwhite;
+  font-family: $fontlato;
+  font-size: 1.3em;
+  text-shadow: 0px 2px 3px $black;
+}
+.text{
+  color: $colortext;
+  font-family: $fontlato;
+  font-size: 1em;
+  font-weight:italic;
+}

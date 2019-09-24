@@ -1,0 +1,43 @@
+// RWD Bases
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+// Imágenes responsive
+img {
+  max-width: 100%;
+  height: auto;
+  
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.revideo {
+  height         : 0;
+  overflow       : hidden;
+  padding-bottom : 56.25%;
+  position       : relative;
+  > iframe,
+  > video,
+  > .video {
+    position : absolute;
+    top      : 0;
+    left     : 0;
+    width    : 100%;
+    height   : 100%;
+  }
+}

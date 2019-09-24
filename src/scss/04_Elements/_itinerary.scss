@@ -1,0 +1,55 @@
+.itineraries {
+  flex-direction: column;
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.itinerary {
+  margin: 15px;
+  max-width: 330px;
+  height: 356px;
+  position: relative;
+  display: grid;
+  overflow: hidden;
+  &__frond {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  &__capa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  &__title {
+    z-index: 1;
+    position: absolute;
+    text-align: center;
+  }
+
+  &__back {
+    display: block;
+    background-color: $lightgray;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    padding: 0.4em;
+  }
+  &__descripction {
+    display: flex
+  }
+}
