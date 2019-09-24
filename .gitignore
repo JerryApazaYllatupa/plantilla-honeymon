@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
@@ -46,6 +47,8 @@ prepros.cfg
 .vscode
 
 node_modules/
+=======
+>>>>>>> 5362cd04b1f6747a6a163c8b0bc395e15a68e6f5
 # Logs
 logs
 *.log
