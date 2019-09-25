@@ -78,14 +78,15 @@
         padding: 7% 0;
       }
     }
+    .title2{
+      
+      font-size: 1.4em;
+      font-family: $fontlato;
+    }
     .text {
       color: $lightwhite;
     }
   }
-
-  // &__text {
-  //   // color:
-  // }
   @include from(m) {
     height: 600px;
   }

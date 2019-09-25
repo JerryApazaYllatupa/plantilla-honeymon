@@ -1,45 +1,53 @@
-.title1{
+.title1 {
   font-family: $fonttitle;
   font-size: 2em;
-  margin-bottom: .2em;
+  margin-bottom: 0.2em;
   color: $black;
 }
-.title3{
+
+.title3 {
   font-family: $fontlato;
   color: $black;
   font-weight: lighter;
   font-size: 1.3em;
 }
 // Diseño del titulo principal
-.design-title{
+.design-title {
   text-align: center;
-  &__span{
+  &__span {
     width: 5em;
-    background-color:$lightblue;
+    background-color: $lightblue;
     height: 3px;
     display: block;
     margin: auto;
   }
-  
-  &__description{
-    margin-top: 5px;
-    color:$colortext;
-  }
 
+  &__description {
+    margin-top: 5px;
+    color: $colortext;
+  }
 }
 
-.textwhite{
-  color:$lightwhite;
+.textwhite {
+  color: $lightwhite;
   font-family: $fontlato;
   font-size: 1.3em;
   text-shadow: 0px 2px 3px $black;
 }
-.text{
+.text {
   color: $colortext;
   font-family: $fontlato;
   font-size: 1.1em;
   font-style: italic;
   line-height: 1.3em;
-  white-space:pre-line;
-  letter-spacing: .06em;
+  white-space: pre-line;
+  letter-spacing: 0.06em;
+}
+.capa {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
 }

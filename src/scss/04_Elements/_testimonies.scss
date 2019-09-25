@@ -1,0 +1,44 @@
+.testimonies {
+  &__banner {
+    position: relative;
+    height: 500px;
+    display: flex;
+  }
+  &__img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  &__videos {
+    position: absolute;
+    top: 5%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    max-width: $max-width;
+    margin: auto;
+  }
+  &__video {
+    width: 300px;
+    height: 258px;
+    background-color: royalblue;
+    margin: 20px;
+    @include to(l) {
+      &:nth-child(1),
+      &:nth-child(3) {
+        display: none;
+      }
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: 20%;
+  }
+}
+// En esta hora me canse asi que escribo hasta que me aburre y de echo ya me aburri jajajaj si lees eres un jil Bueno a trabajar 
