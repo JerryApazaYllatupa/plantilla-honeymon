@@ -35,3 +35,16 @@ mixin targetblog(title="Montaña de 7 colores",description,img,url)
     a.target-blog__img(href=url)
       img(src=img, alt=img)
     
+mixin formsimple
+    form.form(action="#")
+      input(type="text" placeholder="Full name")
+      input(type="text" placeholder="E-mail address")
+      textarea(name="", cols="30", rows="10" placeholder="Write your message")
+      input(type="submit" value="Send")
+
+mixin cardblog(title, img)
+  .cardblog
+    img.cardblog__img(src=rutaImg(img), alt="")
+    .cardblog__capa.capa
+    a(href="http://")
+      h2.cardblog__title.textwhite=title

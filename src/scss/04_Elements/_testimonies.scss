@@ -3,28 +3,54 @@
     position: relative;
     height: 500px;
     display: flex;
+    flex-direction: column;
   }
+
   &__img {
     height: 100%;
     width: 100%;
     object-fit: cover;
   }
+
   &__videos {
+    
+    width: 100%;
+    padding: 0 15px;
     position: absolute;
-    top: 5%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-content: center;
+    grid-gap: 20px;
+    top: 10%;
     left: 0;
     right: 0;
     bottom: 0;
-    display: flex;
-    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
     max-width: $max-width;
-    margin: auto;
+    // margin: auto;
+
+    video {
+      width: 100%;
+      // min-width: 200px;
+      @include to(l) {
+        &:nth-child(3) {
+          display: none;
+        }
+      }
+      @include to(m) {
+        &:nth-child(1) {
+          display: none;
+        }
+      }
+    }
   }
   &__video {
-    width: 300px;
-    height: 258px;
-    background-color: royalblue;
-    margin: 20px;
+    // width: 300px;
+    // // background-color: royalblue;
+    // margin: 20px;
+    // position: relative;
+
     @include to(l) {
       &:nth-child(1),
       &:nth-child(3) {
@@ -41,4 +67,4 @@
     bottom: 20%;
   }
 }
-// En esta hora me canse asi que escribo hasta que me aburre y de echo ya me aburri jajajaj si lees eres un jil Bueno a trabajar 
+// En esta hora me canse asi que escribo hasta que me aburre y de echo ya me aburri jajajaj si lees eres un jil Bueno a trabajar

@@ -1,0 +1,100 @@
+.footer {
+  background-color: $black;
+  text-align: center;
+  padding: 1em 0;
+  &__content {
+    width: 100%;
+    color: $lightwhite;
+    max-width: $max-width;
+    padding-left: $padding;
+    padding-right: $padding;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    justify-content: center;
+    grid-gap: 10px;
+
+    @include from {
+      // grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: 1fr 1fr;
+    }
+    @include from(l) {
+      grid-template-columns: 2fr 1fr 1fr;
+    }
+  }
+
+  &__left {
+    color: blue;
+    display: flex;
+    flex-direction: column;
+    .section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      &__1,
+      &__2 {
+        max-width: 256px;
+        display: flex;
+        flex-direction: column;
+        margin-right: 5px;
+        a{
+
+          color: $lightwhite;
+        }
+        @include from(l) {
+          text-align: start;
+        }
+      }
+      @include from(m) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+  }
+
+  &__center {
+    display: flex;
+    flex-direction: column;
+    a,.text{
+      color: $lightwhite;
+    }
+  }
+  &__right {
+    display: flex;
+    flex-direction: column;
+    a {
+      color: $lightblue;
+    }
+  }
+  &__line {
+    width: 80%;
+    display: block;
+    margin: 15px auto 10px;
+    height: 1.5px;
+    background-color: $lightwhite;
+    &--full{
+      width: 90%;
+    }
+  }
+
+  .text {
+    font-size: 1em;
+  }
+  .title3 {
+    color: $lightwhite;
+  }
+
+  &__bottom {
+    p {
+      margin: 0;
+      color: $lightwhite;
+    }
+  }
+
+  @include fromto(m, l) {
+    &__right {
+      grid-column: span 2;
+    }
+  }
+}

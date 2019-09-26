@@ -1,0 +1,26 @@
+.luxury {
+  &__list {
+    float: left;
+  }
+  &__content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  @include from(l) {
+    &__content {
+      width: 38%;
+    }
+    &__img {
+      width: 60%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .design-title {
+      text-align: start;
+      &__span {
+        display: none;
+      }
+    }
+  }
+}

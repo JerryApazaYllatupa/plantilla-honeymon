@@ -14,7 +14,7 @@
   }
 
   &__certificado {
-    margin-top: 5%;
+    margin-top: 10%;
     z-index: 10;
     @include to(l) {
       display: none;
@@ -36,7 +36,7 @@
   flex-direction: column;
   color: $lightwhite;
   align-items: center;
-  margin-top: 4%;
+  margin-top: 5%;
   .title {
     font-size: 5em;
     font-family: $font;
@@ -57,6 +57,7 @@
 
   }
   @include from (m){
-     margin-top: 10%;
+     margin-top: 15%;
   }
+  
 }

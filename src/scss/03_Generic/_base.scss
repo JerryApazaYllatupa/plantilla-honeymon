@@ -41,3 +41,20 @@ a {
     height   : 100%;
   }
 }
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+  -webkit-box-shadow: inset 0 0 6px rgba(36,136,255,100%); 
+  // border-radius: 10px;
+  
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+   box-shadow:  inset 0 0 6px rgba(0,0,0,0.5); 
+  -webkit-box-shadow: inset 0 0 6px rgba(36,136,255,100%); 
+  background-color: $lightblue;
+}

@@ -7,10 +7,11 @@
 :root {
   --lightblue: #2488ff;
   --black:#111111;
-  --colorTitle: #434040;
+  --colortitle: #434040;
   --colortext: #5d5d5d;
   --lightwhite: #e1dcdc;
   --lightgray:#C5C5C5;
+  --transparent: rgba(0, 0, 0, 0.0);
   //variables secundarys
   --heightheader:68px;
   --fontfamily:myLetter;
@@ -31,7 +32,9 @@ $lightblue: var(--lightblue);
 $black: var(--black);
 $colortext: var(--colortext);
 $lightwhite: var(--lightwhite);
+$colortitle: var(--colorTitle);
 $lightgray:var(--lightgray);
+$trasparent: var(--transparent);
 //Numbers
 $padding:15px;
 $max-width: 1200px;

@@ -3,7 +3,15 @@ const hamburger = document.getElementById('hamburger')
 hamburger.addEventListener('click', e => {
   e.target.previousElementSibling.classList.toggle('activo')
 })
-window.onload = function() {
-  init();
-  doSomethingElse();
-};
+
+addEventListener('scroll',()=>{
+  if(scrollY <= 2){
+
+    document.getElementById('header-principal').style.setProperty('--transparent', 'var(--transparent)' );
+  }else{
+    document.getElementById('header-principal').style.setProperty('--transparent', 'var(--black)' );
+
+  }
+    // const color = 
+
+})

@@ -7,6 +7,10 @@
   position: sticky;
   z-index: 100;
   display: grid;
+  @include from(l){
+    position: fixed;
+    background-color: $trasparent;
+  }
 }
 
 .nav {
@@ -33,6 +37,7 @@
   right: 0;
   top: $heightheader;
   transform: translateX(-1000px);
+  
   &__link {
     margin: 0;
     text-align: center;
@@ -47,6 +52,8 @@
     position: relative;
     flex-direction: row;
     transform: translateX(0);
+    background-color: $trasparent;
+
     top: 0;
     &__link {
       padding: 0;
@@ -55,5 +62,15 @@
   &.activo {
     transition: transform .3s;
     transform: translateX(0);
+  }
+}
+
+.nav__logo{
+  font-family: $font;
+  font-size: 2em;
+  color:$lightwhite;
+  // font-weight: bold;
+  &:hover{
+    text-decoration: none;
   }
 }
