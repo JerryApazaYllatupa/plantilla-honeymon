@@ -48,3 +48,10 @@ mixin cardblog(title, img)
     .cardblog__capa.capa
     a(href="http://")
       h2.cardblog__title.textwhite=title
+      
+mixin banner(title, img)
+  section.banner
+    img.banner__img(src=rutaImg(img), alt=rutaImg(img))
+    .banner__capa.capa
+    .banner__content
+      +title('Relaxing Beach & Culture – 11 Days Peru Culture','')

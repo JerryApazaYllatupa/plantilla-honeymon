@@ -10,8 +10,15 @@ addEventListener('scroll',()=>{
     document.getElementById('header-principal').style.setProperty('--transparent', 'var(--transparent)' );
   }else{
     document.getElementById('header-principal').style.setProperty('--transparent', 'var(--black)' );
-
   }
-    // const color = 
 
 })
+
+// document.getElementById('accordion'),addEventListener('click',(e)=>{
+//   var x=scrollX;
+//   var y=scrollY;
+
+//   // onscroll=()=>{scrollTo(x, y)};
+// })
+
+
