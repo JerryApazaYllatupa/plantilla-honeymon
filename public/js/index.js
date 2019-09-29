@@ -4,21 +4,34 @@ hamburger.addEventListener('click', e => {
   e.target.previousElementSibling.classList.toggle('activo')
 })
 
-addEventListener('scroll',()=>{
-  if(scrollY <= 2){
+addEventListener('scroll', () => {
+  if (scrollY <= 2) {
 
-    document.getElementById('header-principal').style.setProperty('--transparent', 'var(--transparent)' );
-  }else{
-    document.getElementById('header-principal').style.setProperty('--transparent', 'var(--black)' );
+    document.getElementById('header-principal').style.setProperty('--transparent', 'var(--transparent)');
+  } else {
+    document.getElementById('header-principal').style.setProperty('--transparent', 'var(--black)');
   }
 
 })
+// =========== Section accordion =========
+var acc = document.getElementsByClassName("accordion");
+var i;
 
-// document.getElementById('accordion'),addEventListener('click',(e)=>{
-//   var x=scrollX;
-//   var y=scrollY;
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function () {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("active");
 
-//   // onscroll=()=>{scrollTo(x, y)};
-// })
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+
 
 
