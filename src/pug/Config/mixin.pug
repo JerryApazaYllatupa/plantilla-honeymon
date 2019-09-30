@@ -35,19 +35,20 @@ mixin targetblog(title="Montaña de 7 colores",description,img,url)
     a.target-blog__img(href=url)
       img(src=img, alt=img)
     
-mixin formsimple
+mixin formsimple(type)
     form.form(action="#")
       input(type="text" placeholder="Full name")
       input(type="text" placeholder="E-mail address")
-      textarea(name="", cols="30", rows="10" placeholder="Write your message")
+
+      textarea(name="", cols="30", rows=`${type==2 ? '5':'10'}` placeholder="Write your message")
       input(type="submit" value="Send")
 
 mixin cardblog(title, img)
-  .cardblog
+  .cardblog.cardblog-sidebar
     img.cardblog__img(src=rutaImg(img), alt="")
     .cardblog__capa.capa
     a(href="http://")
-      h2.cardblog__title.textwhite=title
+      h2.cardblog__title.cardblog__title--sidebar.textwhite=title
       
 mixin banner(title, img)
   section.banner
@@ -55,3 +56,11 @@ mixin banner(title, img)
     .banner__capa.capa
     .banner__content
       +title('Relaxing Beach & Culture – 11 Days Peru Culture','')
+
+
+mixin buttonaccordion(title)
+  button.accordion__button
+    i.fa.fa-pencil
+    span=title
+    i.fa.fa-plus-square-o.button__iconactivado
+    i.fa.fa-minus-square-o.button__icondesactivado

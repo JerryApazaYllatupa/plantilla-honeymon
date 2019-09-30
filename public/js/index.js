@@ -1,34 +1,34 @@
-const hamburger = document.getElementById('hamburger')
 
-hamburger.addEventListener('click', e => {
+const activeMenuMovil = document.getElementById('hamburger')
+activeMenuMovil.addEventListener('click', e => {
   e.target.previousElementSibling.classList.toggle('activo')
 })
 
+// Evento para cambiar el color del menú
 addEventListener('scroll', () => {
   if (scrollY <= 2) {
-
     document.getElementById('header-principal').style.setProperty('--transparent', 'var(--transparent)');
   } else {
     document.getElementById('header-principal').style.setProperty('--transparent', 'var(--black)');
   }
 
 })
+
+
 // =========== Section accordion =========
-var acc = document.getElementsByClassName("accordion");
+var activeAccordion = document.getElementsByClassName("accordion__button");
 var i;
 
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function () {
-    /* Toggle between adding and removing the "active" class,
-    to highlight the button that controls the panel */
-    this.classList.toggle("active");
+for (i = 0; i < activeAccordion.length; i++) {
+  activeAccordion[i].addEventListener("click", function () {
 
-    /* Toggle between hiding and showing the active panel */
-    var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
+    this.classList.toggle("active");
+    var accordionPanel = this.nextElementSibling;
+
+    if (accordionPanel.style.display === "block") {
+      accordionPanel.style.display = "none";
     } else {
-      panel.style.display = "block";
+      accordionPanel.style.display = "block";
     }
   });
 }

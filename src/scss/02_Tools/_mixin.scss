@@ -65,3 +65,21 @@
 @function ruta_img($img){
   @return './../img/#{$img}';
 }
+@mixin container {
+  max-width: $max-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $padding;
+  padding-right: $padding;
+}
+
+// estyles text
+@mixin text {
+  color: $colortext;
+  font-family: $fontlato;
+  font-size: 1.1em;
+  font-style: italic;
+  line-height: 1.3em;
+  white-space: pre-line;
+  letter-spacing: 0.06em;
+}
