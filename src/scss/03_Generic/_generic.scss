@@ -11,7 +11,7 @@
   font-weight: lighter;
   font-size: 1.3em;
 }
-// Diseño del titulo principal
+
 .design-title {
   text-align: center;
   &__span {
@@ -52,4 +52,8 @@
   margin: 15px auto 10px;
   height: 1.5px;
   background-color: $black;
+}
+
+.container-center{
+  @include container;
 }

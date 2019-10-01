@@ -1,17 +1,18 @@
+@import './00_Library/includes';
+
 @import './01_Settings/variables';
 
-@import './02_Tools/media_querys';
 @import './02_Tools/cords';
 @import './02_Tools/mixin';
-@import './02_Tools/tools';
 
 @import './03_Generic/base';
+@import './03_Generic/generic';
 
 @import './04_Elements/header';
 @import './04_Elements/slider';
 @import './04_Elements/buttons';
 @import './04_Elements/itinerary';
-@import './04_Elements/blogoferta';
+@import './04_Elements/blogoffer';
 @import './04_Elements/letsyourplan';
 @import './04_Elements/whyus';
 @import './04_Elements/testimonies';

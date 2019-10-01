@@ -20,7 +20,7 @@ function style() {
     .pipe(sourcemaps.init())
     //  2- pass that  file trough  sass compile
     .pipe(sass({
-      outputStyle: 'expanded'
+      outputStyle: 'compressed'
     }).on('error', sass.logError))
 
     .pipe(postcss(processors))
@@ -35,7 +35,7 @@ function pugCompile(){
 
  return gulp.src('./src/pug/*.pug')
   .pipe(pug({
-    pretty:true
+    pretty:false
   }))
   .pipe(gulp.dest('./public/'))
 }

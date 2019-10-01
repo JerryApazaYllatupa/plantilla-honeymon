@@ -1,5 +1,4 @@
 .itineraries {
-  flex-direction: column;
   &__content {
     display: flex;
     flex-wrap: wrap;
@@ -7,65 +6,47 @@
   }
 }
 
-.itinerary {
+.card-itinerary {
   margin: 15px;
   max-width: 330px;
   height: 356px;
   position: relative;
   display: grid;
-  overflow: hidden;
-  &__frond {
-    z-index: 2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+  &:hover .card-frond {
+    transition: transform 0.2s ease;
+    transform: rotateY(90deg);
   }
+}
+
+.card-frond {
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   &__img {
     height: 100%;
     width: 100%;
     object-fit: cover;
-  }
-  &__capa {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
   }
   &__title {
     z-index: 1;
     position: absolute;
     text-align: center;
   }
-
-  &__back {
-    
-    height: 100%;
-    background-color: $lightgray;
-    position: absolute;
-    z-index: 1;
-    padding: 0.4em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-    // display: none;
-  }
-
-  &__description {
-      text-align: center;
-  }
-  &:hover &__frond{
-    transition: transform .2s ease;
-    transform: rotateY(90deg);
-  }
 }
-
-.itinerary__title--back{
+.card-back {
+  height: 100%;
+  background-color: $lightgray;
+  position: absolute;
+  z-index: 1;
+  padding: 0.4em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  color: $black;
-  font-family: $fontlato;
+  &__title {
+    color: $black;
+    font-family: $fontlato;
+  }
 }

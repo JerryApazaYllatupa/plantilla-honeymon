@@ -14,26 +14,26 @@ mixin title(text="Titulo",description,type=1)
       h3.title3=text
       span.design-title__span
 
-mixin itinerary(title="Machu Picchu Full day Tour",img,description,url)
-  .itinerary
-    .itinerary__frond
-      img.itinerary__img(src=img, alt=img) 
-      .itinerary__capa
-      h2.itinerary__title.textwhite=title
-    .itinerary__back
-      h3.itinerary__title--back=title
-      i.itinerary__icon.fa.fa-quote-left
-      p.itinerary__description.text=description
+mixin card_itinerary(title="Machu Picchu Full day Tour",img,description,url)
+  .card-itinerary
+    .card-frond
+      img.card-frond__img(src=img, alt=img) 
+      .card-frond__capa.capa
+      h2.card-frond__title.textwhite=title
+    .card-back
+      h3.card-back__title=title
+      i.fa.fa-quote-left
+      p.card-back__description.text=description
       +button(url=url)
 
-mixin targetblog(title="Montaña de 7 colores",description,img,url)
+mixin target_blog(title="Montaña de 7 colores",description,img,url)
   .target-blog
     .target-blog__content
       +title('Montaña de 7 colores','',type=3)
       p.target-blog__description.text=description
       +button
     a.target-blog__img(href=url)
-      img(src=img, alt=img)
+      img(src=rutaImg(img), alt=img)
     
 mixin formsimple(type)
     form.form(action="#")

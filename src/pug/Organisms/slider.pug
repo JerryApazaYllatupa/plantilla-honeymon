@@ -1,13 +1,14 @@
 section.revideo.slider
-  .slider__capa
+  .slider__capa.capa
   video.slider__video(src="./video/Peru Lifetime Experiences by View Peru & Signatures.mp4" width=320  height=240  poster=rutaImg("vistaprevia.jpg") muted autoplay loop)
 
-  .slider__content
-    img.slider__certificado(src=rutaImg('tripadvisor-certificate-of-excellence-2014-2018-compressor.png'), alt="Certificado")
-    .slider__title
-      h1.title View Peru
-      h3.description &signatures
-      h5.description2 On Earth there is no heaven just pieces of it
+  .slider__content.container-center
+    img.slider__certificado(src=rutaImg('tripadvisor-certificate-of-excellence-2014-2018-compressor.png'), alt="Certificado-view-peru")
+    
+    .slider-title
+      h1.slider-title__title View Peru
+      h3.slider-title__description &signatures
+      h5.slider-title__description2 On Earth there is no heaven just pieces of it
       +button('#',"Inquire Now","fa fa-angle-right")
 
       
