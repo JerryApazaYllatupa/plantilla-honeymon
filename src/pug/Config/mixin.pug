@@ -42,6 +42,7 @@ mixin formsimple(type)
 
       textarea(name="", cols="30", rows=`${type==2 ? '5':'10'}` placeholder="Write your message")
       input(type="submit" value="Send")
+ 
 
 mixin cardblog(title, img)
   .cardblog.cardblog-sidebar
@@ -55,7 +56,7 @@ mixin banner(title, img)
     img.banner__img(src=rutaImg(img), alt=rutaImg(img))
     .banner__capa.capa
     .banner__content
-      +title('Relaxing Beach & Culture – 11 Days Peru Culture','')
+      +title(title,'')
 
 
 mixin buttonaccordion(title)
@@ -64,3 +65,17 @@ mixin buttonaccordion(title)
     span=title
     i.fa.fa-plus-square-o.button__iconactivado
     i.fa.fa-minus-square-o.button__icondesactivado
+mixin cardabout(name,description,img,correo)
+  .cardabout
+    .cardabout__pentagono
+    .cardabout__img
+      img(src=rutaImg(img), alt=rutaImg(img))
+    .cardabout__body
+      h2.title2=name 
+      p.text=description
+      span.line
+      .cardabout__footer
+        i.fa.fa-envelope
+        span=correo
+
+

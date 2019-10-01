@@ -1,0 +1,28 @@
+.contact {
+  @include container;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(48%, 1fr));
+  grid-gap: 20px;
+  &__label{
+    margin: 5px auto;
+  }
+}
+.contact__form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  @include from(l) {
+    input {
+      width: 49%;
+    }
+  }
+  
+  .form__inputfull {
+    width: 100%;
+  }
+  .form__selections {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat( 3, 1fr);
+  }
+}

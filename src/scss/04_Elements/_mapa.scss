@@ -1,0 +1,12 @@
+.mapa{
+
+  &__iframe{
+    width: 100%;
+    height: 350px;
+
+    @include from(){
+      height: 450px;
+    }
+    
+  }
+}

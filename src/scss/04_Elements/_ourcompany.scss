@@ -1,0 +1,21 @@
+.ourcomapany {
+  // &__content {
+  // }
+  &__sections {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(48%, 1fr));
+    grid-gap: 20px;
+  }
+  // .secction__img {
+  // }
+  @include to(m) {
+    .img__2 {
+      grid-row: 3/4;
+    }
+    .img__3 {
+      grid-row: 7/8;
+    }
+  }
+  // .secction__content {
+  // }
+}

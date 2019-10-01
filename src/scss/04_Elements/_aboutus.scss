@@ -1,0 +1,93 @@
+.about__perfils {
+  @include container;
+  display: grid;
+  align-items: center;
+  grid-gap: 20px;
+  @include from(l) {
+    grid-template-columns: repeat(auto-fit, minmax(48%, 1fr));
+  }
+}
+
+.cardabout {
+  max-width: 500px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  justify-self: center;
+
+  &__pentagono {
+    width: 160px;
+    height: 200px;
+    background: transparent;
+    position: relative;
+    z-index: 2;
+    &::before {
+      content: "";
+      position: absolute;
+      right: -50px;
+      width: 0;
+      border-top: 100px solid white;
+      border-left: 50px solid transparent;
+      border-bottom: 100px solid white;
+      
+      @include from {
+        right: -100px;
+        height: 100px;
+        border-top: 150px solid white;
+        border-left: 100px solid transparent;
+        border-bottom: 150px solid white;
+      }
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      left: -50px;
+      border-top: 100px solid white;
+      border-right: 50px solid transparent;
+      border-bottom: 100px solid white;
+      @include from {
+        left: -100px;
+        border-top: 150px solid white;
+        border-right: 100px solid transparent;
+        border-bottom: 150px solid white;
+      }
+    }
+    @include from{
+      height: 300px;
+    }
+  }
+  &__body {
+    text-align: center;
+    border: 1px solid $colortext;
+    padding: 2em 1em 1em;
+    margin-top: -30px;
+    box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    width: 260px;
+    height: 200px;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+    @include from {
+      width: 360px;
+      height: 300px;
+    }
+    
+  }
+  &__footer {
+    i.fa {
+      font-size: 1.3em;
+      margin-right: 5px;
+    }
+  }
+}
