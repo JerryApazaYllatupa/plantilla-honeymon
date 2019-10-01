@@ -8,10 +8,14 @@
 }
 
 .itinerary-sidebar {
+  margin: auto;
   &__blog {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+  }
+  &__tripadvisor{
+    text-align: center;
   }
   .cardblog-sidebar {
     max-width: 250px;

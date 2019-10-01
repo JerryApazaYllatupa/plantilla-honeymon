@@ -1,0 +1,36 @@
+.callus {
+  background-color: $lightwhite;
+  padding: 1em 0;
+  &-section {
+    display: flex;
+    align-items: center;
+    &__content {
+      h2{
+        margin: 10px;
+      }
+      h4{
+        margin: 15px;
+      }
+      a {
+        color: $colortext;
+        display: block;
+      }
+    }
+    img{
+      margin-right: 15px;
+    }
+    @include to(){
+      text-align: center;
+      flex-direction: column;
+    }
+  }
+  &-content {
+    @include container;
+    display: grid;
+    grid-gap: 20px;
+    justify-items: center;
+    @include from(m) {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+  }
+}

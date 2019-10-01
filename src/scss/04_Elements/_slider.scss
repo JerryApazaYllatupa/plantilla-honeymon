@@ -1,5 +1,13 @@
 .slider {
-
+  padding-bottom: none;
+  @include from(xl){
+    height: 700px;
+    padding-bottom: 0;
+    video{
+      object-fit: cover;
+    }
+  }
+  // object-fit: cover;
   &__video {
     height: 60%;
   }

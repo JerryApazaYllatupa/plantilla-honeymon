@@ -7,7 +7,7 @@
   position: sticky;
   z-index: 100;
   display: grid;
-  @include from(l){
+  @include from(l) {
     position: fixed;
     background-color: $trasparent;
   }
@@ -16,7 +16,6 @@
 .nav {
   justify-content: space-between;
   align-items: center;
-  // &__logo{}
   &__hamburger {
     @include hamburger($width: 30px);
     @include from(l) {
@@ -37,7 +36,7 @@
   right: 0;
   top: $heightheader;
   transform: translateX(-1000px);
-  
+
   &__link {
     margin: 0;
     text-align: center;
@@ -46,6 +45,46 @@
   &__text {
     color: $lightwhite;
     padding: $padding;
+    &:hover{
+      color: $lightblue;
+    }
+  }
+
+  // menu child
+  &__child__link {
+    position: relative;
+    &:hover > ul {
+      display: block;
+      padding: 1em 0;
+      @include from(l) {
+        background-color: $trasparent;
+        position: absolute;
+        width: 200px;
+        border: 1px solid $lightwhite;
+        top:30px;
+        .menu__link{
+          padding:  .3em;
+          text-align: center;
+        }
+        .menu__text{
+          white-space: pre-wrap;
+          padding:  1em 0;
+        }
+      }
+    }
+    &:hover > a{
+      color: $lightblue;
+    }
+  }
+
+  &__child {
+    color: $lightwhite;
+    list-style: none;
+    padding: 0;
+    background-color: #333;
+    display: none;
+    
+
   }
 
   @include from(l) {
@@ -60,17 +99,16 @@
     }
   }
   &.activo {
-    transition: transform .3s;
+    transition: transform 0.3s;
     transform: translateX(0);
   }
 }
 
-.nav__logo{
+.nav__logo {
   font-family: $font;
   font-size: 2em;
-  color:$lightwhite;
-  // font-weight: bold;
-  &:hover{
+  color: $lightwhite;
+  &:hover {
     text-decoration: none;
   }
 }

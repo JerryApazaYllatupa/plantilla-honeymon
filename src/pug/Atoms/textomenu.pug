@@ -1,10 +1,32 @@
 ul.menu
   li.menu__link
     a.menu__text(href="./") Home
-  li.menu__link
-    a.menu__text(href="itinerary.html") Tours in peru
-  li.menu__link
-    a.menu__text(href="about-us.html") About us
+  li.menu__link.menu__child__link 
+    a.menu__text.menu__text__child(href="#") Tours in peru
+    ul.menu__child
+      li.menu__link
+        a(href="itinerary.html").menu__text Machu Picchu Full day Tour
+      li.menu__link
+        a(href="#").menu__text Relaxing Beach Culture – 11 Days
+      li.menu__link
+        a(href="#").menu__text Romantic Machu Picchu - 5 Day
+      li.menu__link
+        a(href="#").menu__text Relaxing Peru Tour - 11 Days
+      li.menu__link
+        a(href="#").menu__text Machu Picchu Full day Tour
+      li.menu__link
+        a(href="#").menu__text Relaxation and Wildlife 14 Days
+  li.menu__link.menu__child__link 
+    a.menu__text.menu__text__child(href="#") About us
+    ul.menu__child
+      li.menu__link
+        a(href="#").menu__text Our company
+      li.menu__link
+        a(href="about-us.html").menu__text Meet our team
+      li.menu__link
+        a(href="#").menu__text Our booking process
+      li.menu__link
+        a(href="#").menu__text Travel agency services
   li.menu__link
     a.menu__text(href="blog.html") Blog
   li.menu__link
