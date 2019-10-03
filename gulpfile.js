@@ -17,14 +17,14 @@ function style() {
   ];
   // 1- Where is my scss file
   return gulp.src('./src/scss/**/*.scss')
-    .pipe(sourcemaps.init())
+    // .pipe(sourcemaps.init())
     //  2- pass that  file trough  sass compile
     .pipe(sass({
       outputStyle: 'compressed'
     }).on('error', sass.logError))
 
     .pipe(postcss(processors))
-    .pipe(sourcemaps.write())
+    // .pipe(sourcemaps.write())
     // 3- Where  do i save the compiled scss ?
     .pipe(gulp.dest('./public/css'))
     //4- stream  changes  to all  browser
@@ -35,7 +35,7 @@ function pugCompile(){
 
  return gulp.src('./src/pug/*.pug')
   .pipe(pug({
-    pretty:false
+    pretty:true
   }))
   .pipe(gulp.dest('./public/'))
 }
