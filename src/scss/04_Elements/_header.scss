@@ -61,17 +61,17 @@
       display: block;
       padding: 1em 0;
       @include from(l) {
-        background-color: $trasparent;
+        background-color: rgba(0,0,0,.8);
         position: absolute;
         width: 200px;
         border: 1px solid $lightwhite;
         top:30px;
         .menu__link{
-          padding:  .3em;
+          padding:  .5em;
           text-align: center;
         }
         .menu__text{
-          white-space: pre-wrap;
+          // white-space: pre-wrap;
           padding:  1em .3em;
         }
       }
@@ -94,7 +94,6 @@
     flex-direction: row;
     transform: translateX(0);
     background-color: $trasparent;
-
     top: 0;
     &__link {
       padding: 0;

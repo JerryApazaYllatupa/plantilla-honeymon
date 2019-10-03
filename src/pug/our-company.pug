@@ -1,11 +1,14 @@
 extends Templates/template
+append titles
+  title Our company
 append body
   include Molecules/menu
-  include Organisms/bannercompany
+  +banner('Our company', 'banner-our-company-view-peru.jpg')
   include Organisms/ourcompany
-  //- include Organisms/accordionsidebar
-  //- include Organisms/itineraries
+
   include Organisms/letsyourplan
+  include Organisms/callus
+  include Organisms/itineraries
   include Organisms/supor
   include Organisms/footer
 append scripts  

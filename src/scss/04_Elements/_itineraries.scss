@@ -1,0 +1,52 @@
+.itineraries {
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.card-itinerary {
+  margin: 15px;
+  max-width: 330px;
+  height: 356px;
+  position: relative;
+  display: grid;
+  &:hover .card-frond {
+    transition: transform 0.2s ease;
+    transform: rotateY(90deg);
+  }
+}
+
+.card-frond {
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  &__title {
+    z-index: 1;
+    position: absolute;
+    text-align: center;
+  }
+}
+.card-back {
+  height: 100%;
+  background-color: $lightgray;
+  position: absolute;
+  z-index: 1;
+  padding: 0.4em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  &__title {
+    color: $black;
+    font-family: $fontlato;
+  }
+}

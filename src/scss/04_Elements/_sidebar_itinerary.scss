@@ -1,0 +1,24 @@
+
+.itinerary-sidebar {
+  &__blog {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  &__tripadvisor {
+    text-align: center;
+  }
+  .cardblog-sidebar{
+    height: 300px;
+  }
+  
+  .cardblog__title--sidebar {
+    font-size: 1.1em;
+  }
+  .design-title {
+    .title1 {
+      margin: 0;
+      font-size: 1.5em;
+    }
+  }
+}

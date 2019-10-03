@@ -62,7 +62,7 @@
     font-family: $fontlato;
     font-style: italic;
     font-size: 1em;
-    color: gray;
+    color: $colortext;
     &:focus {
       outline: none;
     }

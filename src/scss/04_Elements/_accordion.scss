@@ -1,0 +1,114 @@
+.accordion-content {
+  padding-top: 5px;
+  h2 {
+    color: $lightblue;
+    font-style: italic;
+    font-weight: initial;
+    font-size: 1em;
+  }
+  .icon-check li {
+    list-style-image: url(ruta_img("check.png"));
+  }
+  li {
+    margin: 4px;
+    font-family: $fontlato;
+    font-style: italic;
+    color: $colortext;
+    span {
+      color: $black;
+      font-weight: bold;
+    }
+  }
+  .icon-x li {
+    list-style-image: url(ruta_img("noincludes.png"));
+  }
+}
+
+.accordion-panel {
+  --margin-left: 50px;
+  padding: 0 18px;
+  position: relative;
+  display: none;
+
+  &:nth-child(1) {
+    display: block;
+  }
+}
+
+// ====Design tour plan ====
+.tour-plan {
+  &__line__vertical {
+    border-left: 1.8px solid $colortext;
+    margin-left: var(--margin-left);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+}
+
+.day {
+  &__header {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  &__content {
+    margin-left: var(--margin-left);
+    padding-left: 8px;
+    p {
+      @include text;
+      font-size: 1em;
+    }
+  }
+  &__title {
+    font-size: 0.8em;
+  }
+
+  &__dote {
+    height: 12px;
+    width: 12px;
+    display: flex;
+    background-color: $lightblue;
+    border-radius: 50%;
+    position: absolute;
+    left: 45px;
+    z-index: 1;
+  }
+  &__line {
+    height: 1px;
+    display: block;
+    background-color: $colortext;
+    width: 90%;
+    position: absolute;
+    left: 50px;
+  }
+  &__icon {
+    margin-bottom: 5px;
+    a {
+      color: $black;
+    }
+    i.fa {
+      color: $lightblue;
+      font-size: 1.3em;
+    }
+    span {
+      margin-left: 5px;
+    }
+  }
+}
+// ====End Design tour plan ====
+
+// ========= gallery =========
+.accordion-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+  grid-gap: 10px;
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+// ========= end gallery =========

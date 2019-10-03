@@ -1,24 +1,36 @@
-.post{
+.post {
   @include container;
-  &__section{
+  &__section {
     display: grid;
     grid-gap: 20px;
-    @include from(l){
+    .text{
+      text-align: justify;
+    }
+    @include from(l) {
       grid-template-columns: 75% 1fr;
     }
   }
-  // &__content{
-
-  // }
-  // &__sidebar{
-
-  // }
+  &__content,
+  &__sidebar {
+    .title2 {
+      color: $black;
+      font-size: 1.3em;
+      font-family: $fontlato;
+      font-style: italic;
+    }
+  }
+  &__sidebar {
+    .cardblog-sidebar {
+      max-width: 250px;
+      height: 300px;
+    }
+  }
 }
-.post-sidebar{
+.post-sidebar {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap:10px;
-  // &__post{
-  //   // max-width: 300px;
-  // }
+  grid-gap: 30px;
+  &__post{
+    text-align: center;
+  }
 }

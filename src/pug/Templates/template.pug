@@ -8,12 +8,47 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    title Honeymoon
+    meta(name="msapplication-square310x310logo" content="view-peru.png")
+    meta(name="description" content="PERU TOURS: View Peru offers Peru Luxury Travel Packages and Luxury Inca Trail Tours, Machu Picchu Journeys fully customizable with daily departures Packages and Luxury Inca Trail Tours, Machu Picchu Journeys fully customizable with daily departures.")
+    meta(name="theme-color" content="#2488FF")
+    block titles
+    script(type="application/ld+json").
+     {
+      "@context": "https://schema.org",
+      
+      "@graph":
+        [
+          {
+            "@type": "WebSite",
+            "@id": "http://peruhoneymoontours.com/",
+            "name": "Peru Honeymoon Tours",
+            "url": "http://peruhoneymoontours.com/",
+            "publisher":
+              {
+                "@type": "Organization",
+                "@id": "http://peruhoneymoontours.com/",
+                "name": "Peru Honeymoon toursl",
+                "url": "http://peruhoneymoontours.com/",
+                "sameAs": "Peru Honeymoon tours",
+                "image": "img/view-peru.png"
+              },
+              "contactPoint": 
+              {
+                "@type": "ContactPoint",
+                "telephone": "+448000465350",
+                "contactType": "Customer service"
+              }
+          }
+        ]
+      }
+    link(rel="manifest" href="/manifest.json")
+    link(rel="icon" sizes="192x192" href="/img/honeymoon.ico")
+    link(rel="apple-touch-icon" href="/img/honeymoon.ico")
     link(rel="stylesheet", href="css/style.css")
     link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
     link(href="https://fonts.googleapis.com/css?family=Bad+Script&display=swap" rel="stylesheet")
     link(href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i&display=swap" rel="stylesheet")
-    
+    link(rel="shortcut icon" type="image/icon" href="/img/honeymoon.ico")
   body
     block body
     block scripts

@@ -1,4 +1,7 @@
 .luxury {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
   &__list {
     float: left;
   }

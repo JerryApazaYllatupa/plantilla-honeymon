@@ -1,0 +1,32 @@
+{
+  "short_name": "Honeymoon",
+  "name": "Peru Honeymoon",
+  "icons": [
+    {
+      "src": "img/logo-3.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "img/logo-2.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "img/logo-1.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": "index.html",
+  "display": "fullscreen",
+  "theme_color": "#2488FF",
+  "background_color":"#111111",
+  "prefer_related_applications": false,
+  "related_applications": [
+    {
+      "platform": "play",
+      "id": "com.google.samples.apps.iosched"
+    }
+  ]
+}

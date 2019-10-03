@@ -20,16 +20,21 @@ var activeAccordion = document.getElementsByClassName("accordion__button");
 var i;
 
 for (i = 0; i < activeAccordion.length; i++) {
-  activeAccordion[i].addEventListener("click", function () {
+  activeAccordion[0].nextElementSibling.style.display ="block";
+  activeAccordion[0].classList.add("active");
 
+  activeAccordion[i].addEventListener("click", function () {
     this.classList.toggle("active");
     var accordionPanel = this.nextElementSibling;
 
     if (accordionPanel.style.display === "block") {
+
       accordionPanel.style.display = "none";
+
     } else {
       accordionPanel.style.display = "block";
     }
+
   });
 }
 

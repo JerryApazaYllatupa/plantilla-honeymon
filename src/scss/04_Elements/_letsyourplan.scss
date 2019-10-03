@@ -1,15 +1,11 @@
 .letsyourplan {
   justify-content: center;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   &__buttons{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     width: 100%;
-    .btn-primary{
-
-      margin-bottom: 15px;
-    }
   }
 }

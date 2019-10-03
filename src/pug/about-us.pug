@@ -1,7 +1,9 @@
 extends Templates/template
+append titles
+  title About us Honeymoon
 append body
   include Molecules/menu
-  include Organisms/bannerabout
+  +banner('About us', 'banner_aboutus_view_peru.jpg')
   include Organisms/aboutus
   //- include Organisms/aboutu
   include Organisms/letsyourplan

@@ -1,7 +1,9 @@
 extends Templates/template
+append titles
+  title Blog Honeymoon
 append body
   include Molecules/menu
-  include Organisms/bannerblog
+  +banner('Blog', 'portada-blog-view-peru.jpg')
   include Organisms/blog
   include Organisms/letsyourplan
   include Organisms/supor

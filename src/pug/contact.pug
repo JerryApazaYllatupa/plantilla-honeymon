@@ -1,7 +1,10 @@
 extends Templates/template
+append titles
+  title Contact us
+  
 append body
   include Molecules/menu
-  include Organisms/bannercontact
+  +banner('Contact us', 'guest-testimonials-min.jpg')
   include Organisms/contactform
   include Organisms/mapa
   

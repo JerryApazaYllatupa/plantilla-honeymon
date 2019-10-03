@@ -1,10 +1,13 @@
 extends Templates/template
+append titles
+  title Itineararies
 append body
   include Molecules/menu
-  include Organisms/banner
-  include Organisms/accordionsidebar
+  +banner('Relaxing Beach & Culture – 11 Days Peru Culture','culturetours.jpg')
+  include Organisms/itinerary
   include Organisms/itineraries
   include Organisms/letsyourplan
+  include Organisms/callus
   
   
   include Organisms/footer

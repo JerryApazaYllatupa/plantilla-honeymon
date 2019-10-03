@@ -1,52 +1,44 @@
-.itineraries {
-  &__content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-}
-
-.card-itinerary {
-  margin: 15px;
-  max-width: 330px;
-  height: 356px;
-  position: relative;
+.itinerary {
   display: grid;
-  &:hover .card-frond {
-    transition: transform 0.2s ease;
-    transform: rotateY(90deg);
+  grid-gap: 5px;
+  @include from(l) {
+    grid-template-columns: 75% 1fr;
   }
 }
 
-.card-frond {
-  z-index: 2;
+.accordion__button {
+  background-color: #eee;
+  color: $lightblue;
+  cursor: pointer;
+  padding: 0.6em 1em;
+  font-size: 1em;
+  width: 100%;
+  margin-bottom: 5px;
+  border-radius: 45px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  &__img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+  justify-content: space-between;
+  border: none;
+  background-color: $lightwhite;
+
+  @at-root .active,
+    &:hover {
+    background-color: $lightblue;
+    color: white;
   }
-  &__title {
-    z-index: 1;
-    position: absolute;
-    text-align: center;
+
+  .fa.button__icondesactivado {
+    display: none;
   }
-}
-.card-back {
-  height: 100%;
-  background-color: $lightgray;
-  position: absolute;
-  z-index: 1;
-  padding: 0.4em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  &__title {
-    color: $black;
-    font-family: $fontlato;
+  .fa.button__iconactivado {
+    display: block;
+  }
+
+  &.active {
+    .fa.button__icondesactivado {
+      display: block;
+    }
+    .fa.button__iconactivado {
+      display: none;
+    }
   }
 }

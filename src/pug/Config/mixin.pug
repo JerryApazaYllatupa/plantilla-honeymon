@@ -14,7 +14,7 @@ mixin title(text="Titulo",description,type=1)
       h3.title3=text
       span.design-title__span
 
-mixin card_itinerary(title="Machu Picchu Full day Tour",img,description,url)
+mixin card_itinerary(title="Machu Picchu Full day Tour",img,description)
   .card-itinerary
     .card-frond
       img.card-frond__img(src=img, alt=img) 
@@ -24,7 +24,7 @@ mixin card_itinerary(title="Machu Picchu Full day Tour",img,description,url)
       h3.card-back__title=title
       i.fa.fa-quote-left
       p.card-back__description.text=description
-      +button(url=url)
+      +button("itinerary.html")
 
 mixin target_blog(title="Montaña de 7 colores",description,img,url)
   .target-blog
@@ -59,13 +59,13 @@ mixin banner(title, img)
       +title(title,'')
 
 
-mixin buttonaccordion(title)
+mixin button_accordion(title)
   button.accordion__button
     i.fa.fa-pencil
     span=title
     i.fa.fa-plus-square-o.button__iconactivado
     i.fa.fa-minus-square-o.button__icondesactivado
-mixin cardabout(name,description,img,correo)
+mixin card_about(name,description,img,correo)
   .cardabout
     .cardabout__pentagono
     .cardabout__img
@@ -77,5 +77,4 @@ mixin cardabout(name,description,img,correo)
       .cardabout__footer
         i.fa.fa-envelope
         span=correo
-
 

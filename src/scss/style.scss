@@ -11,7 +11,7 @@
 @import './04_Elements/header';
 @import './04_Elements/slider';
 @import './04_Elements/buttons';
-@import './04_Elements/itinerary';
+@import './04_Elements/itineraries';
 @import './04_Elements/blogoffer';
 @import './04_Elements/letsyourplan';
 @import './04_Elements/whyus';
@@ -24,7 +24,9 @@
 
 //section  Itinerary
 @import './04_Elements/banner';
-@import './04_Elements/accordionitinerary';
+@import './04_Elements/itinerary';
+@import './04_Elements/accordion';
+@import './04_Elements/sidebar_itinerary';
 
 // section contact
 @import './04_Elements/contactform';
